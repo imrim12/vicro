@@ -1,0 +1,9 @@
+{
+  "name": "Vicro",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "action": { "default_popup": "popup.html" },
+  "description": "⚡️ Opinionated Vite - Vue Chrome Extension Starter Template ⚡️",
+  "host_permissions": ["https://crrie.com/"],
+  "permissions": ["activeTab"]
+}

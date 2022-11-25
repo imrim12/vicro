@@ -1,0 +1,27 @@
+{
+  "name": "vicro",
+  "description": "Vicro - ⚡️ Opinionated Vite - Vue Chrome Extension Starter Template ⚡️",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "start": "vite preview"
+  },
+  "keywords": [
+    "vite",
+    "vue",
+    "chrome",
+    "extension"
+  ],
+  "author": "imrim12",
+  "license": "MIT",
+  "dependencies": {
+    "vite": "^3.2.4",
+    "vue": "^3.2.45"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.2.0",
+    "@vitejs/plugin-vue-jsx": "^2.1.1",
+    "vitest": "^0.25.3"
+  }
+}
