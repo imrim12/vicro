@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "module": "ESNext",
+    "rootDir": "./services",
+    "baseUrl": "./services",
+    "module": "AMD",
+    "outFile": "./dist/background.js",
     "target": "ESNext",
     "lib": ["DOM", "ESNext"],
     "strict": true,
@@ -14,23 +16,8 @@
     "strictNullChecks": true,
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
-    "types": [
-      "vitest",
-      "vite/client",
-      "vue/ref-macros",
-      "@types/node",
-      "@types/chrome"
-    ],
-    "paths": {
-      "@/*": ["src/*"]
-    }
+    "types": ["vitest", "@types/node", "@types/chrome"]
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.d.ts",
-    "src/**/*.vue",
-    "service/**/*.ts"
-  ],
+  "include": ["./services/**/*.ts"],
   "exclude": ["dist", "node_modules"]
 }

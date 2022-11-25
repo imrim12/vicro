@@ -4,7 +4,9 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "pnpm build:app && pnpm build:service",
+    "build:app": "vite build",
+    "build:service": "tsc --project tsconfig.service.json",
     "start": "vite preview"
   },
   "keywords": [
@@ -22,6 +24,8 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.31.0",
+    "@types/chrome": "^0.0.203",
+    "@types/node": "^18.11.9",
     "@vitejs/plugin-vue": "^3.2.0",
     "@vitejs/plugin-vue-jsx": "^2.1.1",
     "eslint": "^8.28.0",

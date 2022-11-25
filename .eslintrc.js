@@ -10,6 +10,9 @@ module.exports = {
   extends: ["@antfu", "plugin:unicorn/all"],
   plugins: ["unicorn"],
   rules: {
+    // Default rules
+    "no-console": "warn",
+    // Unicorn rules
     "unicorn/filename-case": [
       "error",
       {
@@ -19,6 +22,7 @@ module.exports = {
         },
       },
     ],
+    // Typescript rules
     "@typescript-eslint/semi": ["error", "always"],
     "@typescript-eslint/quotes": ["error", "double"],
   },
