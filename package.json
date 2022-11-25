@@ -16,12 +16,21 @@
   "author": "imrim12",
   "license": "MIT",
   "dependencies": {
+    "pinia": "^2.0.26",
     "vite": "^3.2.4",
     "vue": "^3.2.45"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^0.31.0",
     "@vitejs/plugin-vue": "^3.2.0",
     "@vitejs/plugin-vue-jsx": "^2.1.1",
-    "vitest": "^0.25.3"
+    "eslint": "^8.28.0",
+    "eslint-plugin-unicorn": "^45.0.0",
+    "eslint-plugin-vue": "^9.8.0",
+    "typescript": "^4.9.3",
+    "unplugin-auto-import": "^0.11.5",
+    "unplugin-vue-components": "^0.22.11",
+    "vitest": "^0.25.3",
+    "vue-tsc": "^1.0.9"
   }
 }
