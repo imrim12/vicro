@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "rootDir": "./services",
-    "baseUrl": "./services",
+    "rootDir": "./",
+    "baseUrl": "./",
     "module": "AMD",
-    "outFile": "./dist/background.js",
+    "outFile": "../dist/background.js",
     "target": "ESNext",
     "lib": ["DOM", "ESNext"],
     "strict": true,
@@ -18,6 +18,6 @@
     "forceConsistentCasingInFileNames": true,
     "types": ["vitest", "@types/node", "@types/chrome"]
   },
-  "include": ["./services/**/*.ts"],
+  "include": ["./**/*.ts"],
   "exclude": ["dist", "node_modules"]
 }

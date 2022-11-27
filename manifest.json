@@ -1,12 +1,20 @@
 {
+  "manifest_version": 3,
   "name": "Vicro",
   "version": "0.0.1",
-  "manifest_version": 3,
-  "description": "⚡️ Opinionated Vite - Vue Chrome Extension Starter Template ⚡️",
-  "host_permissions": ["https://crrie.com/"],
-  "permissions": ["activeTab"],
   "action": { "default_popup": "dist/index.html" },
+  "default_locale": "en",
+  "description": "⚡️ Opinionated Vite - Vue Chrome Extension Starter Template ⚡️",
+  "icons": {
+    "16": "dist/icon-16.png",
+    "32": "dist/icon-32.png",
+    "48": "dist/icon-48.png",
+    "128": "dist/icon-128.png"
+  },
+  "author": "thecodeorigin",
   "background": {
     "service_worker": "dist/background.js"
-  }
+  },
+  "host_permissions": ["http*"],
+  "permissions": ["activeTab"]
 }
