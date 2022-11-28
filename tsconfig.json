@@ -4,7 +4,8 @@
     "module": "ESNext",
     "target": "ESNext",
     "lib": ["DOM", "ESNext"],
-    "strict": true,
+    "strict": false,
+    "allowJs": true,
     "esModuleInterop": true,
     "jsx": "preserve",
     "skipLibCheck": true,
@@ -12,11 +13,10 @@
     "resolveJsonModule": true,
     "noUnusedLocals": true,
     "strictNullChecks": true,
-    "allowJs": true,
     "forceConsistentCasingInFileNames": true,
     "types": [
-      "vitest",
       "vite/client",
+      "vitest",
       "vue/ref-macros",
       "@types/node",
       "@types/chrome"
@@ -25,12 +25,6 @@
       "@/*": ["src/*"]
     }
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.d.ts",
-    "src/**/*.vue",
-    "service/**/*.ts"
-  ],
-  "exclude": ["dist", "node_modules"]
+  "include": ["./**/*"],
+  "exclude": ["dist", "node_modules", "public"]
 }
