@@ -1,7 +1,4 @@
-import fs from "node:fs";
-import path from "node:path";
-
-const manifest: chrome.runtime.ManifestV3 = {
+export const manifest: chrome.runtime.ManifestV3 = {
   manifest_version: 3,
   name: "Vicro",
   short_name: "Vicro",
@@ -82,5 +79,3 @@ const manifest: chrome.runtime.ManifestV3 = {
     "webRequestBlocking",
   ],
 };
-
-fs.writeFileSync(path.resolve("./dist", "manifest.json"), JSON.stringify(manifest, undefined, 2));

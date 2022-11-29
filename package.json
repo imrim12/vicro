@@ -5,11 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "pnpm build:app && pnpm build:service && pnpm build:inject && pnpm build:manifest",
-    "build:app": "vite build",
-    "build:service": "tsc --project ./service/tsconfig.json",
-    "build:inject": "tsc --project ./inject/tsconfig.json",
-    "build:manifest": "ts-node --esm ./manifest",
+    "build": "rimraf ./dist && vite build",
     "start": "vite preview"
   },
   "keywords": [
@@ -34,6 +30,8 @@
     "eslint": "^8.28.0",
     "eslint-plugin-unicorn": "^45.0.0",
     "eslint-plugin-vue": "^9.8.0",
+    "nodemon": "^2.0.20",
+    "rimraf": "^3.0.2",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.3",
     "unplugin-auto-import": "^0.11.5",
