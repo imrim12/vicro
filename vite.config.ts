@@ -6,6 +6,9 @@ import { defineConfig } from "vite";
 
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
+import WindiCSS from "vite-plugin-windicss";
+import Components from "unplugin-vue-components/vite";
+import AutoImport from "unplugin-auto-import/vite";
 
 import { manifest } from "./manifest";
 
@@ -42,5 +45,31 @@ export default defineConfig({
       "@/": `${path.resolve(__dirname, "src")}/`,
     },
   },
-  plugins: [vue(), vueJsx(), generateManifest()],
+  plugins: [
+    vue(),
+    vueJsx(),
+    // https://github.com/antfu/unplugin-auto-import
+    AutoImport({
+      imports: ["vue", "pinia"],
+      dts: "src/auto-imports.d.ts",
+      dirs: ["src/composables", "src/store"],
+      vueTemplate: true,
+    }),
+    // https://github.com/antfu/unplugin-vue-components
+    Components({
+      dirs: ["src/components/base"],
+      // allow auto load markdown components under `./src/components/`
+      extensions: ["vue"],
+      // allow auto import and register components used in markdown
+      include: [/\.vue$/, /\.vue\?vue/],
+      dts: "src/components.d.ts",
+    }),
+    WindiCSS({
+      scan: {
+        dirs: ["."], // all files in the cwd
+        fileExtensions: ["vue", "js", "ts"], // also enabled scanning for js/ts
+      },
+    }),
+    generateManifest(),
+  ],
 });

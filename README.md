@@ -14,6 +14,8 @@ Mocking up Chrome Extension with <b>Vicro</b><br>
 
 - ⚡️ [Vue 3](https://github.com/vuejs/core), [Vite 3](https://github.com/vitejs/vite), [pnpm](https://pnpm.io/), [ESBuild](https://github.com/evanw/esbuild) - born with fastness
 
+- 📦 [Components auto importing](./src/components/base)
+
 - 🍍 [State Management via Pinia](https://pinia.vuejs.org/)
 
 - 🎨 [WindiCSS](https://windicss.org) - Next generation utility-first CSS framework.
@@ -43,7 +45,7 @@ When you use this template, try follow the checklist to update your info properl
 
 ### Development
 
-The extension use production build with watch mode
+Since the extension works like a normal web application, you can start the development server normally.
 
 ```bash
 pnpm dev
