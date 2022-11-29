@@ -30,7 +30,7 @@ export default defineConfig({
       input: {
         main: path.resolve(__dirname, "./index.html"),
         background: path.resolve(__dirname, "./src/background.ts"),
-        injected: path.resolve(__dirname, "./src/inject.ts"),
+        inject: path.resolve(__dirname, "./src/inject.ts"),
       },
       output: {
         entryFileNames: "[name].js",
