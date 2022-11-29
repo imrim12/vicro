@@ -3,5 +3,6 @@ chrome.runtime.onInstalled.addListener(async () => {
 
   const tab = await chrome.tabs.create({ url });
 
+  // eslint-disable-next-line no-console
   console.log(`Created tab ${tab.id}`);
 });

@@ -2,11 +2,14 @@
   "name": "vicro",
   "description": "Vicro - ⚡️ Opinionated Vite - Vue Chrome Extension Starter Template ⚡️",
   "version": "0.0.1",
+  "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "pnpm build:app && pnpm build:service",
+    "build": "pnpm build:app && pnpm build:service && pnpm build:inject && pnpm build:manifest",
     "build:app": "vite build",
     "build:service": "tsc --project ./service/tsconfig.json",
+    "build:inject": "tsc --project ./inject/tsconfig.json",
+    "build:manifest": "ts-node --esm ./manifest",
     "start": "vite preview"
   },
   "keywords": [
@@ -31,6 +34,7 @@
     "eslint": "^8.28.0",
     "eslint-plugin-unicorn": "^45.0.0",
     "eslint-plugin-vue": "^9.8.0",
+    "ts-node": "^10.9.1",
     "typescript": "^4.9.3",
     "unplugin-auto-import": "^0.11.5",
     "unplugin-vue-components": "^0.22.11",

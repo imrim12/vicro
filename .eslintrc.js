@@ -11,6 +11,7 @@ module.exports = {
   plugins: ["unicorn"],
   rules: {
     // Default rules
+    "comma-dangle": "off",
     "no-console": "warn",
     // Unicorn rules
     "unicorn/filename-case": [
@@ -25,5 +26,15 @@ module.exports = {
     // Typescript rules
     "@typescript-eslint/semi": ["error", "always"],
     "@typescript-eslint/quotes": ["error", "double"],
+    "@typescript-eslint/comma-dangle": [
+      "warn",
+      {
+        arrays: "always-multiline",
+        objects: "always-multiline",
+        imports: "always-multiline",
+        exports: "never",
+        functions: "never",
+      },
+    ],
   },
 };
