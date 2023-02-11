@@ -35,6 +35,7 @@
     "rimraf": "^3.0.2",
     "rollup-plugin-windicss": "^1.8.8",
     "ts-node": "^10.9.1",
+    "tsx": "^3.12.3",
     "typescript": "^4.9.3",
     "unplugin-auto-import": "^0.11.5",
     "unplugin-vue-components": "^0.22.11",

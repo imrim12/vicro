@@ -1,4 +1,3 @@
-import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -10,21 +9,7 @@ import WindiCSS from "vite-plugin-windicss";
 import Components from "unplugin-vue-components/vite";
 import AutoImport from "unplugin-auto-import/vite";
 
-import { manifest } from "./manifest";
-
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-const generateManifest = () => {
-  return {
-    name: "generate-manifest",
-    closeBundle: () => {
-      fs.writeFileSync(
-        path.resolve("./dist", "manifest.json"),
-        JSON.stringify(manifest, undefined, 2)
-      );
-    },
-  };
-};
 
 export default defineConfig({
   base: "./",
@@ -46,7 +31,9 @@ export default defineConfig({
     },
   },
   plugins: [
-    vue(),
+    vue({
+      include: [/\.vue$/, /\.vue\?vue/],
+    }),
     vueJsx(),
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
@@ -70,6 +57,5 @@ export default defineConfig({
         fileExtensions: ["vue", "js", "ts"], // also enabled scanning for js/ts
       },
     }),
-    generateManifest(),
   ],
 });
